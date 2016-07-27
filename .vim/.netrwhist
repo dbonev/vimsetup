@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/dimitarbonev/dev/proj/iOS'
+let g:netrw_dirhist_2='/Users/dimitarbonev/dev/proj/iOS/SimpleDraw'
+let g:netrw_dirhist_3='/Users/dimitarbonev/dev/proj/iOS/SimpleDraw/SimpleDraw'
+let g:netrw_dirhist_4='/Users/dimitarbonev'
+let g:netrw_dirhist_5='/Users/dimitarbonev/.cache'
+let g:netrw_dirhist_6='/Users/dimitarbonev'
+let g:netrw_dirhist_7='/Users/dimitarbonev/dev/proj/iOS/BusinessAndMe/BusinessAndMe'
+let g:netrw_dirhist_8='/Users/dimitarbonev/dev/proj/iOS/BusinessAndMe'
