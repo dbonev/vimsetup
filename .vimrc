@@ -1,8 +1,4 @@
 if has("gui_macvim")
-	colorscheme vividchalk
-endif
-
-if has("gui_macvim")
     let macvim_hig_shift_movement = 1
 endif
 
@@ -26,6 +22,8 @@ endif
 :command Wq wq
 :command CDF :cd %:p:h
 :command DIFF :w !diff % -
+:command JSON :%! python -m json.tool
+:command JS set syntax=javascript
 
 :set expandtab
 :set tabstop=4
@@ -57,7 +55,7 @@ function! DoPrettyXML()
   " restore the filetype
   exe "set ft=" . l:origft
 endfunction
-command! PrettyXML call DoPrettyXML()
+command! PrettyXML %! xmllint --format %
 :set clipboard=unnamedplus
 map <F4> :e %:p:s,.h$,.X123X,:s,.m$,.h,:s,.X123X$,.m,<CR>
 
@@ -82,6 +80,24 @@ silent! nmap <C-s> :NERDTreeFind<CR>
 silent! nmap <C-q> :set wrap<CR>:set lbr<CR>
 silent! nmap <C-p> :CtrlP .<CR>
 :let g:notes_directories=['~/Dropbox/Notes']
+set t_Co=256
+if has("gui_macvim")
+	" colorscheme vividchalk
+	colorscheme atom-dark-256
+else
+    " let ayucolor="dark"
+    " set background=dark
+    " set background=light
+	" colorscheme vividchalk
+	" colorscheme atom-dark-256
+	" colorscheme afterglow
+	colorscheme PaperColor
+	" colorscheme deus
+	"colorscheme nova
+endif
+syntax on
+let @c = '0kgg/descrijI//~j$%jGkI//~j'
+let @u = ':%s/\/\/\~//'
 
 "let g:NERDTreeMapActivateNode="<F3>"
 "let g:NERDTreeMapPreview="<F4>"
